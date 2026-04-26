@@ -16,10 +16,10 @@ export const HeroBanner = () => (
           Admisiones y eventos académicos
         </p>
         <h1 className="font-serif text-5xl font-bold leading-none sm:text-6xl lg:text-7xl">
-          Javeriana Lead & Events Manager
+          Javeriana
         </h1>
         <p className="mt-6 max-w-2xl text-lg leading-8 text-blue-50">
-          Consulta la oferta académica simulada desde JSONPlaceholder, filtra programas y registra prospectos con una experiencia sobria, accesible y persistente.
+          Consulta la oferta académica.
         </p>
         <div className="mt-8">
           <a href="#programas">
@@ -41,10 +41,6 @@ export const HeroBanner = () => (
           <div>
             <dt className="font-serif text-4xl font-bold">3</dt>
             <dd className="text-xs font-bold uppercase tracking-wide">Categorías</dd>
-          </div>
-          <div>
-            <dt className="font-serif text-4xl font-bold">SPA</dt>
-            <dd className="text-xs font-bold uppercase tracking-wide">Sin recargas</dd>
           </div>
         </dl>
       </aside>

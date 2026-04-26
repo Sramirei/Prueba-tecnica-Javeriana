@@ -22,7 +22,7 @@ export const LeadsTable = () => {
         <EmptyState
           icon={<UserPlus className="h-7 w-7" aria-hidden="true" />}
           title="Aún no hay prospectos"
-          description="Cuando registres un interesado desde una card de programa, aparecerá aquí y permanecerá disponible gracias a localStorage."
+          description="Cuando registres un interesado desde una card de programa, aparecerá aquí."
         />
       ) : (
         <div className="overflow-hidden rounded-sm border border-stone-line bg-white shadow-sm dark:border-javeriana-blue-800 dark:bg-javeriana-blue-900">

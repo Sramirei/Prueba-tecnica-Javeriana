@@ -71,9 +71,6 @@ export const HomePage = () => {
                 <h2 className="font-serif text-4xl font-bold leading-tight text-javeriana-blue dark:text-white sm:text-5xl">
                   Programas y eventos académicos
                 </h2>
-                <p className="mt-3 max-w-3xl text-base leading-7 text-slate-600 dark:text-blue-100">
-                  Datos obtenidos desde JSONPlaceholder y transformados en programas institucionales para evaluar arquitectura, consumo REST, filtros y gestión de leads.
-                </p>
               </div>
               <p className="text-sm font-bold uppercase tracking-wide text-slate-500 dark:text-blue-100" aria-live="polite">
                 {resultsLabel}
