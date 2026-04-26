@@ -2,21 +2,6 @@ import { getPosts, type JsonPlaceholderPost } from '../api/jsonPlaceholderApi';
 import { sentenceCase } from '../helpers/formatText';
 import type { Program, ProgramCategory, ProgramModality } from '../types/program.types';
 
-const PROGRAM_NAMES = [
-  'Derecho y Ciencias Políticas',
-  'Ingeniería de Sistemas',
-  'Medicina',
-  'Comunicación Social',
-  'Maestría en Analítica para la Inteligencia de Negocios',
-  'Especialización en Gerencia Financiera',
-  'Diplomado en Innovación Educativa',
-  'Curso de Liderazgo Público',
-  'Arquitectura',
-  'Psicología',
-  'Maestría en Estudios Culturales',
-  'Seminario de Transformación Digital'
-] as const;
-
 const FACULTIES = [
   'Facultad de Ciencias Jurídicas',
   'Facultad de Ingeniería',
@@ -39,6 +24,16 @@ const modalities: ProgramModality[] = ['Presencial', 'Híbrido', 'Virtual'];
 const getProgramCategory = (post: JsonPlaceholderPost): ProgramCategory =>
   categories[(post.id - 1) % categories.length];
 
+const getProgramTitlePrefix = (category: ProgramCategory): string => {
+  const prefixByCategory: Record<ProgramCategory, string> = {
+    Pregrado: 'Programa de',
+    Posgrado: 'Maestría en',
+    'Educación Continua': 'Diplomado en'
+  };
+
+  return prefixByCategory[category];
+};
+
 const getDurationByCategory = (category: ProgramCategory): string => {
   const durationByCategory: Record<ProgramCategory, string> = {
     Pregrado: '8 a 10 semestres',
@@ -51,7 +46,7 @@ const getDurationByCategory = (category: ProgramCategory): string => {
 
 const transformPostToProgram = (post: JsonPlaceholderPost): Program => {
   const category = getProgramCategory(post);
-  const programName = PROGRAM_NAMES[(post.id - 1) % PROGRAM_NAMES.length];
+  const programName = `${getProgramTitlePrefix(category)} ${sentenceCase(post.title)}`;
 
   return {
     id: String(post.id),
