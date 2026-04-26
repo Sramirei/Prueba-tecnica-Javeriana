@@ -146,7 +146,7 @@ docker stop javeriana-leads
 
 ## Deployment
 
-Placeholder: `https://javeriana-lead-events-manager.vercel.app`
+Aplicación desplegada en Render: `https://prueba-tecnica-javeriana.onrender.com`
 
 ## Recomendaciones finales
 
